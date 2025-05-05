@@ -10,7 +10,7 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Kabootar Haryanvi song ", filePath: '1.mp3', coverPath: "1.png"},
+    {songName: "Kabootar Haryanvi song ", filePath: "1.mp3", coverPath: "1.png"},
     {songName: "4G KA JAMANA", filePath: "2.mp3", coverPath: "2.jpeg"},
     {songName: "Bahu Chaudhariya ki", filePath: "3.mp3", coverPath: "3.jpeg"},
     {songName: "Bahu Jamidar ki  New  2015 Superhit ", filePath: "4.mp3", coverPath: "4.jpeg"},
@@ -18,7 +18,7 @@ let songs = [
     {songName: "BAHU_BATASE_Si_", filePath: "6.mp3", coverPath: "6.jpeg"},
     {songName: "Bandook Chalegi Sapna Chaudhary New Super Hit Song", filePath: "7.mp3", coverPath: "7.jpeg"},
     {songName: "BANDOOK : Pranjal Dahiya ", filePath: "8.mp3", coverPath: "8.jpeg"},
-    {songName: "Bhagatt Aadmi ", filePath: '9.mp3', coverPath: "9.jpeg"},
+    {songName: "Bhagatt Aadmi ", filePath: "9.mp3", coverPath: "9.jpeg"},
     {songName: "Bhirad Ladgi - Masoom Sharma", filePath: "10.mp3", coverPath: "10.jpeg"},
 ]
 
@@ -46,7 +46,7 @@ masterPlay.addEventListener('click', ()=>{
 // Listen to Events
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
-   let progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
+    progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
     myProgressBar.value = progress;
 })
 
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = songs[songIndex].filePath;
+        audioElement.src = `songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -84,7 +84,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
