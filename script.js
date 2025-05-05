@@ -2,7 +2,7 @@ console.log("Welcome to DJ YADAV");
 
 // Initialize the Variables
 let songIndex = 0;
-let audioElement = new Audio(songs[songIndex].filePath);
+let audioElement = new Audio('0.1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
