@@ -18,7 +18,7 @@ let songs = [
     {songName: "BAHU_BATASE_Si_", filePath: "6.mp3", coverPath: "6.jpeg"},
     {songName: "Bandook Chalegi Sapna Chaudhary New Super Hit Song", filePath: "7.mp3", coverPath: "7.jpeg"},
     {songName: "BANDOOK : Pranjal Dahiya ", filePath: "8.mp3", coverPath: "8.jpeg"},
-    {songName: "Bhagatt Aadmi ", filePath: "https://lokeshyadav0529.github.io/DJ-RAO/songs/9.mp3", coverPath: "9.jpeg"},
+    {songName: "Bhagatt Aadmi ", filePath: "https://lokeshyadav0529.github.io/DJ-RAO/9.mp3", coverPath: "9.jpeg"},
     {songName: "Bhirad Ladgi - Masoom Sharma", filePath: "10.mp3", coverPath: "10.jpeg"},
 ]
 
