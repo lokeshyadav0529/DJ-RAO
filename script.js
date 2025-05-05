@@ -2,7 +2,7 @@ console.log("Welcome to DJ YADAV");
 
 // Initialize the Variables
 let songIndex = 0;
-let audioElement = new Audio('0.1.mp3');
+let audioElement = new Audio(songs[0].filePath);
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -46,7 +46,7 @@ masterPlay.addEventListener('click', ()=>{
 // Listen to Events
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
-    progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
+   let progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
     myProgressBar.value = progress;
 })
 
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = songs[songIndex].filePath;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
