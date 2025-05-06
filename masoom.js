@@ -1,7 +1,7 @@
 console.log("Welcome to masoom sharma");
 
 // Initialize the Variables
-let songIndex = 11;
+let songIndex = 0;
 let audioElement = new Audio('11.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
@@ -33,8 +33,8 @@ let songs = [
 ]
 
 songItems.forEach((element, i)=>{ 
-    element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
-    element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+    element.getElementsByTagName("img")[11].src = songs[i].coverPath; 
+    element.getElementsByClassName("songName")[11].innerText = songs[i].songName; 
 })
  
 
