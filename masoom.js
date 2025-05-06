@@ -1,4 +1,4 @@
-console.log("Welcome to DJ YADAV");
+console.log("Welcome to masoom sharma");
 
 // Initialize the Variables
 let songIndex = 0;
@@ -10,7 +10,6 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-   
     {songName: "Pistol Bole Gi", filePath: "11.mp3", coverPath: "11.jpeg"},
     {songName: "32 Ke Fire", filePath: "12.mp3", coverPath: "12.jpeg"},
     {songName: "Warning ", filePath: "13.mp3", coverPath: "13.jpeg"},
