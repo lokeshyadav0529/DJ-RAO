@@ -104,8 +104,8 @@ document.getElementById('next').addEventListener('click', ()=>{
 })
 
 document.getElementById('previous').addEventListener('click', ()=>{
-    if(songIndex<=0){
-        songIndex = 0
+    if(songIndex<=10){
+        songIndex = 10
     }
     else{
         songIndex -= 1;
