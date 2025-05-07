@@ -1,7 +1,7 @@
 console.log("Welcome to masoom sharma");
 
 // Initialize the Variables
-let songIndex = 11;
+let songIndex = 10;
 let audioElement = new Audio('11.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
