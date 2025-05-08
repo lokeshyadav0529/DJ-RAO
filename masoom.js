@@ -6,7 +6,7 @@ let audioElement = new Audio('11.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
-let masterSongName = document.getElementById('masterSongName');
+let SongName = document.getElementById('SongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
@@ -16,7 +16,7 @@ let songs = [
     {songName: "Danda Deniya", filePath: "14.mp3", coverPath: "14.jpeg"},
     {songName: "1987", filePath: "15.mp3", coverPath: "15.jpeg"},
     {songName: "1800 Shooter", filePath: "16.mp3", coverPath: "16.jpeg"},
-    {songName: "Moj.mp3", filePath: "17.mp3", coverPath: "17.jpeg"},
+    {songName: "Moj", filePath: "17.mp3", coverPath: "17.jpeg"},
     {songName: "Sharp Shooter", filePath: "18.mp3", coverPath: "18.jpeg"},
     {songName: "60 Mukadme - Masoom Sharma", filePath: "19.mp3", coverPath: "19.jpeg"},
     {songName: "Marda Pe Case", filePath: "20.mp3", coverPath: "20.jpeg"},
@@ -78,7 +78,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
         audioElement.src = `${songIndex+1}.mp3`;
-        masterSongName.innerText = songs[songIndex].songName;
+        SongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity = 1;
@@ -95,7 +95,7 @@ document.getElementById('next').addEventListener('click', ()=>{
         songIndex += 1;
     }
     audioElement.src = `${songIndex+1}.mp3`;
-    masterSongName.innerText = songs[songIndex].songName;
+    SongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
@@ -111,7 +111,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
         songIndex -= 1;
     }
     audioElement.src = `${songIndex+1}.mp3`;
-    masterSongName.innerText = songs[songIndex].songName;
+   SongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
