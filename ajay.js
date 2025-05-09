@@ -11,26 +11,26 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
    
-    {songName: "Solid Body ", filePath: "songs./31.mp3", coverPath: "covers./31.jpeg"},
-    {songName: "Moka_Soka", filePath: "songs./32.mp3", coverPath: "covers./32.jpeg"},
-    {songName: "Moto", filePath: "songs./12.mp3", coverPath: "covers./33.jpeg"},
-    {songName: "Suthri Si Chori", filePath: "songs./13s./14.mp3", coverPath: "covers./34.jpeg"},
-    {songName: "Husband_Bawla", filePath: "songs./15.mp3", coverPath: "covers./35.jpeg"},
-    {songName: "Bhang_Ka_Barota", filePath: "songs./17.mp3", coverPath: "covers./36.jpeg"},
-    {songName: "Soldier", filePath: "songs./16.mp3", coverPath: "covers./37.jpeg"},
-    {songName: "Tik_Tok", filePath: "songs./18.mp3", coverPath: "covers./38.jpeg"},
-    {songName: "Uncle", filePath: "songs./19.mp3", coverPath: "covers./39.jpeg"},
-    {songName: "Love_You_Moto", filePath: "songs./20.mp3", coverPath: "covers./40.jpeg"},
-    {songName: "Kamar_Teri_Left_Right_Halle", filePath: "songs./21.mp3", coverPath: "covers./41.jpeg"},
-    {songName: "Bahu_Kale_K", filePath: "songs./22.mp3", coverPath: "covers./42.jpeg"},
-    {songName: "Fauji", filePath: "songs./23.mp3", coverPath: "covers./43.jpeg"},
-    {songName: "Bhabhi", filePath: "songs./24.mp3", coverPath: "covers./44.jpeg"},
-    {songName: "Kaliya_Murad", filePath: "songs./25.mp3", coverPath: "covers./45.jpeg"},
-    {songName: "Mehnga_Perfume", filePath: "songs./26.mp3", coverPath: "covers./46.jpeg"},
-    {songName: "Olha Mein Patola", filePath: "songs./27.mp3", coverPath: "covers./47.jpeg"},
-    {songName: "Lamba Lamba Ghunghat - Ajay Hooda", filePath: "songs./28.mp3", coverPath: "covers./48.jpeg"},
-    {songName: "Age Gap - Ajay Hooda", filePath: "songs./29.mp3", coverPath: "covers./49.jpeg"},
-    {songName: "Patange - Ajay Hooda ", filePath: "songs./30.mp3", coverPath: "covers./50.jpeg"},
+    {songName: "Solid Body ", filePath: "31.mp3", coverPath: "31.jpeg"},
+    {songName: "Moka_Soka", filePath: "32.mp3", coverPath: "32.jpeg"},
+    {songName: "Moto", filePath: "33.mp3", coverPath: "33.jpeg"},
+    {songName: "Suthri Si Chori", filePath: "34.mp3", coverPath: "34.jpeg"},
+    {songName: "Husband_Bawla", filePath: "35.mp3", coverPath: "35.jpeg"},
+    {songName: "Bhang_Ka_Barota", filePath: "36.mp3", coverPath: "36.jpeg"},
+    {songName: "Soldier", filePath: "37.mp3", coverPath: "37.jpeg"},
+    {songName: "Tik_Tok", filePath: "38.mp3", coverPath: "38.jpeg"},
+    {songName: "Uncle", filePath: "39.mp3", coverPath: "39.jpeg"},
+    {songName: "Love_You_Moto", filePath: "40.mp3", coverPath: "40.jpeg"},
+    {songName: "Kamar_Teri_Left_Right_Halle", filePath: "41.mp3", coverPath: "41.jpeg"},
+    {songName: "Bahu_Kale_K", filePath: "42.mp3", coverPath: "42.jpeg"},
+    {songName: "Fauji", filePath: "43.mp3", coverPath: "43.jpeg"},
+    {songName: "Bhabhi", filePath: "44.mp3", coverPath: "44.jpeg"},
+    {songName: "Kaliya_Murad", filePath: "45.mp3", coverPath: "45.jpeg"},
+    {songName: "Mehnga_Perfume", filePath: "46.mp3", coverPath: "46.jpeg"},
+    {songName: "Olha Mein Patola", filePath: "47.mp3", coverPath: "47.jpeg"},
+    {songName: "Lamba Lamba Ghunghat - Ajay Hooda", filePath: "48.mp3", coverPath: "48.jpeg"},
+    {songName: "Age Gap - Ajay Hooda", filePath: "49.mp3", coverPath: "49.jpeg"},
+    {songName: "Patange - Ajay Hooda ", filePath: "50.mp3", coverPath: "50.jpeg"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -75,10 +75,10 @@ const makeAllPlays = ()=>{
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click', (e)=>{ 
         makeAllPlays();
-        songIndex = parseInt(e.target.id)-10;
+        songIndex = parseInt(e.target.id)-30;
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -95,7 +95,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -111,7 +111,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
