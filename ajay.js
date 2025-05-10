@@ -89,8 +89,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 })
 
 document.getElementById('next').addEventListener('click', ()=>{
-    if(songIndex>=29){
-        songIndex = 10
+    if(songIndex>=49){
+        songIndex = 30
     }
     else{
         songIndex += 1;
@@ -105,8 +105,8 @@ document.getElementById('next').addEventListener('click', ()=>{
 })
 
 document.getElementById('previous').addEventListener('click', ()=>{
-    if(songIndex<=10){
-        songIndex = 10
+    if(songIndex<=30){
+        songIndex = 30
     }
     else{
         songIndex -= 1;
