@@ -1,7 +1,7 @@
 console.log("Welcome to DJ YADAV");
 
 // Initialize the Variables
-let songIndex = 30;
+let songIndex = 01;
 let audioElement = new Audio('31.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
@@ -90,7 +90,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 
 document.getElementById('next').addEventListener('click', ()=>{
     if(songIndex>=49){
-        songIndex = 30
+        songIndex = 01
     }
     else{
         songIndex += 1;
